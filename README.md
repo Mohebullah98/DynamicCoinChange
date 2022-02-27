@@ -12,6 +12,8 @@ There are 4 ways.
 
 What we need to do is keep track of all the ways we can make change for all the values upto n.
 
+ways[0]=1 by default (only 1 way to make 0)
+
 We iterate through the whole ways array where index = value, each time when coins[i]<j, we want to add all the ways we have for coins[i]-j and all the previous ways for ways[j]. This will equal the new value of ways[j].
 
 Why do we do this? Through each iteration we're calculating how many different ways we can create that value with that coin, this is done when we add ways[coins[i]-j], we're checking to see how many different ways we can make the difference of the coin and the value.
